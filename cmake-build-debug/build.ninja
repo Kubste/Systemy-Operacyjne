@@ -51,19 +51,19 @@ build cmake_object_order_depends_target_DiningPhilosophers: phony || CMakeFiles/
 
 build CMakeFiles/DiningPhilosophers.dir/Philosopher.cpp.obj: CXX_COMPILER__DiningPhilosophers_unscanned_Debug C$:/Users/jakub/CLionProjects/DiningPhilosophers/Philosopher.cpp || cmake_object_order_depends_target_DiningPhilosophers
   DEP_FILE = CMakeFiles\DiningPhilosophers.dir\Philosopher.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O0 -std=c++20 -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\DiningPhilosophers.dir
   OBJECT_FILE_DIR = CMakeFiles\DiningPhilosophers.dir
 
 build CMakeFiles/DiningPhilosophers.dir/Monitor.cpp.obj: CXX_COMPILER__DiningPhilosophers_unscanned_Debug C$:/Users/jakub/CLionProjects/DiningPhilosophers/Monitor.cpp || cmake_object_order_depends_target_DiningPhilosophers
   DEP_FILE = CMakeFiles\DiningPhilosophers.dir\Monitor.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O0 -std=c++20 -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\DiningPhilosophers.dir
   OBJECT_FILE_DIR = CMakeFiles\DiningPhilosophers.dir
 
 build CMakeFiles/DiningPhilosophers.dir/main.cpp.obj: CXX_COMPILER__DiningPhilosophers_unscanned_Debug C$:/Users/jakub/CLionProjects/DiningPhilosophers/main.cpp || cmake_object_order_depends_target_DiningPhilosophers
   DEP_FILE = CMakeFiles\DiningPhilosophers.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O0 -std=c++20 -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\DiningPhilosophers.dir
   OBJECT_FILE_DIR = CMakeFiles\DiningPhilosophers.dir
 
@@ -76,7 +76,8 @@ build CMakeFiles/DiningPhilosophers.dir/main.cpp.obj: CXX_COMPILER__DiningPhilos
 # Link the executable DiningPhilosophers.exe
 
 build DiningPhilosophers.exe: CXX_EXECUTABLE_LINKER__DiningPhilosophers_Debug CMakeFiles/DiningPhilosophers.dir/Philosopher.cpp.obj CMakeFiles/DiningPhilosophers.dir/Monitor.cpp.obj CMakeFiles/DiningPhilosophers.dir/main.cpp.obj
-  FLAGS = -g
+  FLAGS = -O0 -std=c++20 -g
+  LINK_FLAGS = -static -static-libgcc -static-libstdc++
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\DiningPhilosophers.dir
   POST_BUILD = cd .

@@ -17,6 +17,8 @@ vector<int> read_input_file(const string& path) {
             data.push_back(stoi(sub_str));
         }
     }
+
+    file.close();
     return data;
 }
 

@@ -48,8 +48,15 @@ void Monitor::put_forks(int ID) {
     pthread_mutex_lock(&mutex);
 
     states[ID] = THINKING;
-    this->test((ID + N - 1) % N);
-    this->test((ID + 1) % N);
+
+    int left = ((ID + N - 1) % N);
+    int right = ((ID + 1) % N);
+
+    this->test(left);
+    if(states[left] == HUNGRY) pthread_cond_signal(&conditions[left]);
+
+    this->test(right);
+    if(states[right] == HUNGRY) pthread_cond_signal(&conditions[right]);
 
     pthread_mutex_unlock(&mutex);
 }
