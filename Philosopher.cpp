@@ -21,13 +21,11 @@ void Philosopher::run() {
 void Philosopher::put_forks() {
     this_thread::sleep_for(chrono::seconds(distribution_eating(gen)));
     monitor.put_forks(ID);
-    this_thread::sleep_for(chrono::seconds(1));
 }
 
 void Philosopher::take_forks() {
     this_thread::sleep_for(chrono::seconds(distribution_thinking(gen)));
     monitor.take_forks(ID);
-    this_thread::sleep_for(chrono::seconds(1));
 }
 
 void Philosopher::join() {

@@ -4,7 +4,7 @@
 #include <vector>
 #include <pthread.h>
 #include <unistd.h>
-#include <chrono>
+#include <vector>
 #include <thread>
 #include <iostream>
 
@@ -21,8 +21,8 @@ class Monitor {
         vector<int> states;
         vector<pthread_cond_t> conditions;
         pthread_mutex_t mutex{};
-        vector<chrono::time_point<chrono::system_clock>> ate_times;
         thread monitorThread;
+        vector<int> hungry_for;
 
     public:
         Monitor(int N);
