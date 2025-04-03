@@ -22,7 +22,7 @@ class Monitor {
         vector<pthread_cond_t> conditions;
         pthread_mutex_t mutex{};
         vector<chrono::time_point<chrono::system_clock>> ate_times;
-        thread thread;
+        thread monitorThread;
 
     public:
         Monitor(int N);

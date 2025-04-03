@@ -12,7 +12,7 @@ Monitor::~Monitor() {
 }
 
 void Monitor::start() {
-    thread = std::thread(&Monitor::run, this);
+    monitorThread = std::thread(&Monitor::run, this);
 }
 
 void Monitor::run() {

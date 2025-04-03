@@ -1,7 +1,8 @@
 # Systemy Operacyjne 2 - Zadanie projektowe 1
 
 # Uruchamianie programu
-Plik wykonywalny projektu - **_DiningPhilosophers.exe_** znajduje się w lokalizacji:
+Plik wykonywalny projektu zarówno dla systemu Windows jak i Linux - **_DiningPhilosophers.exe_** / 
+**_DiningPhilosophers_**znajduje się w lokalizacji:
 **cmake-build-debug**.  
 Plik **_input.txt_** projektu znanduje się w lokalizacji: **cmake-build-debug/files/**. 
 Jest to plik .txt, w którym należy podać pożądane parametry wejściowe dla programu, 

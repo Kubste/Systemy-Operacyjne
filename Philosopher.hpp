@@ -15,7 +15,7 @@ class Philosopher {
     private:
         int ID;
         Monitor &monitor;
-        thread thread;
+        thread philosopherThread;
         int max_time_eating{};
         int max_time_thinking{};
         uniform_int_distribution<> distribution_eating;
@@ -24,7 +24,7 @@ class Philosopher {
 
     public:
         Philosopher(int ID, Monitor &monitor, int max_time_eating, int max_time_thinking);
-        Philosopher(Philosopher&& other) noexcept : ID(other.ID), monitor(other.monitor), thread(std::move(other.thread)) {}
+        Philosopher(Philosopher&& other) noexcept : ID(other.ID), monitor(other.monitor), philosopherThread(std::move(other.philosopherThread)) {}
         ~Philosopher();
         void run();
         void put_forks();

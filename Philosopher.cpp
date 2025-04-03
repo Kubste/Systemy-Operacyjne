@@ -4,7 +4,7 @@ Philosopher::Philosopher(int ID, Monitor &monitor, int max_time_eating, int max_
     max_time_eating(max_time_eating), max_time_thinking(max_time_thinking) {}
 
 void Philosopher::start() {
-    thread = std::thread(&Philosopher::run, this);
+    philosopherThread = std::thread(&Philosopher::run, this);
 }
 
 void Philosopher::run() {
@@ -31,7 +31,7 @@ void Philosopher::take_forks() {
 }
 
 void Philosopher::join() {
-    if(thread.joinable()) thread.join();
+    if(philosopherThread.joinable()) philosopherThread.join();
 }
 
 Philosopher::~Philosopher() {

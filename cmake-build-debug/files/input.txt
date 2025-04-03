@@ -1,3 +1,3 @@
-Liczba filozofów# 10
-Maksymalny czas jedzenia# 2
-Maksymalny czas myślenia# 3
+Liczba filozofów# 12
+Maksymalny czas jedzenia# 3
+Maksymalny czas myślenia# 4
